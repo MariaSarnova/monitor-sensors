@@ -1,0 +1,150 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1739977247792-1
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_info_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: role
+                  type: VARCHAR(255)
+            tableName: user_info
+  - changeSet:
+      id: 1739977247792-4
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: sensor_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: description
+                  type: VARCHAR(200)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: from_r
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: location
+                  type: VARCHAR(40)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: model
+                  type: VARCHAR(15)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(30)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: to_r
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: type_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: unit_id
+                  type: INTEGER
+            tableName: sensor
+  - changeSet:
+      id: 1739977247792-5
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: type_pkey
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(255)
+            tableName: type
+  - changeSet:
+      id: 1739977247792-6
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: unit_pkey
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(255)
+            tableName: unit
+  - changeSet:
+      id: 1739977247792-7
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: unit_id
+            baseTableName: sensor
+            constraintName: fk7503o6lw1d906id4si23smctp
+            referencedColumnNames: id
+            referencedTableName: unit
+  - changeSet:
+      id: 1739977247792-8
+      author: sarnova (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: type_id
+            baseTableName: sensor
+            constraintName: fkcq3lgwdf190kd8ot0nb6592be
+            referencedColumnNames: id
+            referencedTableName: type
+

@@ -1,0 +1,141 @@
+
+databaseChangeLog:
+    - changeSet:
+          id: 1739977247792-1
+          author: sarnova (generated)
+          changes:
+            - insert:
+                tableName: type
+                columns:
+                  - column:
+                      name: id
+                      value: "1"
+                  - column:
+                      name: name
+                      value: "Pressure"
+            - insert:
+                tableName: type
+                columns:
+                  - column:
+                      name: id
+                      value: "2"
+                  - column:
+                      name: name
+                      value: "Voltage"
+            - insert:
+                tableName: type
+                columns:
+                  - column:
+                      name: id
+                      value: "3"
+                  - column:
+                      name: name
+                      value: "Temperature"
+            - insert:
+                tableName: type
+                columns:
+                  - column:
+                      name: id
+                      value: "4"
+                  - column:
+                      name: name
+                      value: "Humidity"
+
+            - insert:
+                tableName: unit
+                columns:
+                  - column:
+                      name: id
+                      value: "1"
+                  - column:
+                      name: name
+                      value: "bar"
+            - insert:
+                tableName: unit
+                columns:
+                  - column:
+                      name: id
+                      value: "2"
+                  - column:
+                      name: name
+                      value: "voltage"
+            - insert:
+                tableName: unit
+                columns:
+                  - column:
+                      name: id
+                      value: "3"
+                  - column:
+                      name: name
+                      value: "°С"
+            - insert:
+                tableName: unit
+                columns:
+                  - column:
+                      name: id
+                      value: "4"
+                  - column:
+                      name: name
+                      value: "%"
+
+            - insert:
+                tableName: user_info
+                columns:
+                  - column:
+                      name: id
+                      value: "1"
+                  - column:
+                      name: name
+                      value: "admin"
+                  - column:
+                      name: password
+                      value: "$2a$12$wp/krcn6Kb1jx.Qj74tQo./YjsClhIA/pSkxkniFArUzzCqOMu0VO"
+                  - column:
+                      name: role
+                      value: "ADMINISTRATOR"
+            - insert:
+                tableName: user_info
+                columns:
+                  - column:
+                      name: id
+                      value: "2"
+                  - column:
+                      name: name
+                      value: "user"
+                  - column:
+                      name: password
+                      value: "$2a$12$ZyNf4Sp35zGFKoCdUsvfD.WI5zWNzOXOyQ0BgORHfDTqUGdkmqbG6"
+                  - column:
+                      name: role
+                      value: "ADMINISTRATOR"
+            - insert:
+                tableName: sensor
+                columns:
+                  - column:
+                      name: id
+                      value: "1"
+                  - column:
+                      name: description
+                      value: "just a sensor"
+                  - column:
+                      name: from_r
+                      value: "1"
+                  - column:
+                      name: location
+                      value: "kitchen"
+                  - column:
+                      name: model
+                      value: "tq-6"
+                  - column:
+                      name: name
+                      value: "Termometr"
+                  - column:
+                      name: to_r
+                      value: "30"
+                  - column:
+                      name: type_id
+                      value: "1"
+                  - column:
+                      name: unit_id
+                      value: "1"
+
