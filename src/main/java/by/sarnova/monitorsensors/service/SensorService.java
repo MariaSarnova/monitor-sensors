@@ -58,7 +58,6 @@ public class SensorService {
             log.info("Sensor with id={} was deleted",id);
         }
         else {
-            log.info("Sensor id={} is not in the database",id);
             throw new CustomException("Sensor id="+id+" is not in the database");
         }
     }
